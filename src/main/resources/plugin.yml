@@ -1,0 +1,10 @@
+name: ChatEngine
+version: ${project.version}
+main: dev.alofi11.minecraft.servers.plugins.chatengine.ChatEnginePlugin
+api-version: 1.15
+load: STARTUP
+depend: [ ProtocolLib ]
+softdepend: [ PlaceholderAPI ]
+authors: [ alofi11 ]
+description: ChatEngine is a paper-based plugin for chat menus.
+website: ${project.url}

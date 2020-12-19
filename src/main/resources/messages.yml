@@ -1,0 +1,68 @@
+# ┅━━━━━━━━━━━━━━━━━━< Information >━━━━━━━━━━━━━━━━━━┅ #
+# Here contains all messages of plugin.
+#
+# # # # # # Placeholders # # # # #
+# Each message has placeholder %target% and your own placeholders from section "placeholders".
+# Also, if in your server installed PlaceholderAPI, you can use its placeholders.
+# PlaceholderAPI give you a incredible opportunity interaction between plugins.
+# I recommend use it. More: https://www.spigotmc.org/resources/placeholderapi.6245
+#
+# # # # # # Tags # # # # #
+# Messenger support the tags, and you can make messages better beautiful with its.
+#
+# This tag calls the text inside on mouse hover.
+# <hover>hover text!</hover>
+# To end the hover tag workspace use:
+# <hover>null</hover>
+#
+# This tags do own action on mouse click on workspace (the outside text).
+# <click run>/help</click> - send the inside text to chat.
+# <click copy>copy text</click> - copy the inside text.
+# <click open_url>https://duckduckgo.com</click> - open the inside text as url.
+# <click suggest>/help</click> - suggest the inside text to player.
+# To end the click tag workspace use:
+# <click run>null</click>
+#
+# Other tags.
+# <expand/> - expand empty lines for fill full chat (there must be one in the line to work).
+# <expand/number> - spaces placeholder. <expand/5> will be replaced with 5 spaces.
+#
+# Correct tag sequence: {click tag}{hover tag}{colors}.
+# # # # # # Colors # # # # #
+# Also, depended of your config.yml settings, you can use colors and formatting.
+#
+# Legacy colors: black(&0), dark blue(&1), dark green(&2), dark aqua(&3), dark red(&4),
+# dark purple(&5), gold(&6), gray(&7), dark gray(&8), blue(&9), green(&a), aqua(&b), red(&c),
+# light purple(&d), yellow(&e), white(&f).
+# Example of use: &atext.
+#
+# Formatting: obfuscated(&k), bold(&l), strikethrough(&m), underline(&n), italic(&o).
+# Used just like the legacy colors.
+#
+# Hex colors: https://www.colorschemer.com/hex-color-codes.
+# Example of use: <#aabbcc>text.
+#
+# Gradients.
+# Example of use: <#aabbcc:#ccaabb>.
+# ┅━━━━━━━━━━━━━━━━━━< Information >━━━━━━━━━━━━━━━━━━┅ #
+
+# ┅━━━━━━━━━━━━━━━━━━< Configuration >━━━━━━━━━━━━━━━━━━┅ #
+# Config version.
+version: ${messagesconfig.version}
+
+# Your own placeholders.
+placeholders:
+  # Use: %prefix%.
+  prefix: '&f[<#565051>Chat<#F87217>Engine&f]'
+
+# %permission%.
+no-perms:
+  - "%prefix%<hover>&4You need have &f%permission% &4to do that.</hover>
+  &4You haven't enough permissions to do that."
+
+main-command-help:
+  - '&f/chatengine reload &7for reload configurations.'
+
+reloaded:
+  - '&aConfigurations reloaded.'
+# ┅━━━━━━━━━━━━━━━━━━< Configuration >━━━━━━━━━━━━━━━━━━┅ #

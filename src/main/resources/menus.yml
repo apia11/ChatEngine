@@ -1,0 +1,63 @@
+# ┅━━━━━━━━━━━━━━━━━━< Information >━━━━━━━━━━━━━━━━━━┅ #
+# Here you use all messenger tags.
+#
+# # # # # # Navigation # # # # #
+# <click run>change_page(page)</click> - open other page.
+# <click run>change_menu(menu)</click> - open other menu.
+# <click run>close</click> - close menu.
+# ┅━━━━━━━━━━━━━━━━━━< Information >━━━━━━━━━━━━━━━━━━┅ #
+
+# ┅━━━━━━━━━━━━━━━━━━< Configuration >━━━━━━━━━━━━━━━━━━┅ #
+# Config version.
+version: ${menusconfig.version}
+
+example-menu:
+  command:
+    name: examplemenu
+    # Aliases is optional, can be removed.
+    aliases: [ exmenu, emenu ]
+    permission: examplemenu.perm
+  pages:
+    # First page without the depend of name is a main and open on command execute.
+    main:
+      - '<extend/34><#7FFFD4>Main menu'
+      - '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - ''
+      - '<extend/10>&eWelcome, &a%target%&e!'
+      - '<extend/>'
+      - '<extend/5><click run>chp(support)</click>&6> &eSupport'
+      - ''
+      - '<extend/5><click run>chp(resources)</click>&6> &eResources'
+      - ''
+      - '<extend/>'
+      - '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '<extend/71><click run>close</click>&c⟨Close⟩'
+
+    support:
+      - '<extend/34><#7FFFD4>Support'
+      - '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '<extend/>'
+      - ''
+      - '<extend/5>&eClick for open link:'
+      - ''
+      - '<extend/5><click open_url>https://ko-fi.com/alofi11</click>&6> &aKo-fi &e(paypal).'
+      - ''
+      - '<extend/5><click open_url>https://new.donatepay.ru/@658082</click>&6> &aDonatePay &e(other).'
+      - '<extend/>'
+      - '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '<extend/72><click run>chp(main)</click>&c⟨Main⟩'
+
+    resources:
+      - '<extend/33><#7FFFD4>Resources'
+      - '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '<extend/>'
+      - ''
+      - '<extend/5>&eClick for open link:'
+      - ''
+      - '<extend/5><click open_url>https://github.com/alofi11/ChatEngine</click>&6> Git&8Hub'
+      - ''
+      - '<extend/5><click open_url>https://discord.gg/BcSgjrTbJg</click>&6> &5Discord'
+      - '<extend/>'
+      - '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '<extend/72><click run>chp(main)</click>&c⟨Main⟩'
+# ┅━━━━━━━━━━━━━━━━━━< Configuration >━━━━━━━━━━━━━━━━━━┅ #

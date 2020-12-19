@@ -1,0 +1,47 @@
+# ┅━━━━━━━━━━━━━━━━━━< Information >━━━━━━━━━━━━━━━━━━┅ #
+# Copyright (C) alofi11, 2020.
+#
+# Plugin discord: https://discord.gg/BcSgjrTbJg.
+# Plugin github: https://github.com/alofi11/ChatEngine.
+#
+# Support me on
+# Ko-fi (paypal): https://ko-fi.com/alofi11
+# DonatePay (others): https://new.donatepay.ru/@658082
+# ┅━━━━━━━━━━━━━━━━━━< Information >━━━━━━━━━━━━━━━━━━┅ #
+
+# ┅━━━━━━━━━━━━━━━━━━< Configuration >━━━━━━━━━━━━━━━━━━┅ #
+# Version of config.
+version: ${mainconfig.version}
+
+plugin:
+  # Enabled (true) or not (false).
+  enabled: false
+
+colors-support:
+  # Colors a.g. &0 - black, &f - white.
+  # Include formatting a.g. &k - obfuscated, &o - italic.
+  legacy: true
+
+  # Hex colors (only 1.16+). Format: <#aabbcc>.
+  # Collection: https://www.colorschemer.com/hex-color-codes.
+  hex: true
+
+  # (only 1.16+). Format: <#aabbcc:#ddeeff>.
+  gradients: true
+
+addons:
+  # Players with permissions can write colored messages.
+  # Permissions in down be work only if this color type and component is enabled!
+  # legacy: chatengine.colors.legacy
+  # hex: chatengine.colors.hex
+  # gradients: gradients.colors.hex
+  chat-colors: false
+
+  # If update of plugin is available, on join administrators be get notify about update.
+  # Permission: chatengine.notify
+  update-notifier: false
+
+  # Automatically download update to chatengine/versions/version.jar.
+  # Update notifier need be enabled.
+  update-auto-downloader: false
+# ┅━━━━━━━━━━━━━━━━━━< Configuration >━━━━━━━━━━━━━━━━━━┅ #
