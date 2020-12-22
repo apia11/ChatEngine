@@ -55,7 +55,7 @@ public final class UpdateNotifier implements Listener {
   }
 
   @NotNull
-  private InputStream getStream() throws IOException {
+  private InputStream getGitStream() throws IOException {
     return new URL(CHECK_UPDATE_URL).openStream();
   }
 
@@ -69,9 +69,14 @@ public final class UpdateNotifier implements Listener {
     return stringBuilder.toString();
   }
 
+  @NotNull
+  private Scanner getGitScanner() throws IOException {
+    return new Scanner(getGitStream());
+  }
+
   private void checkUpdate() {
     try {
-      Scanner scanner = new Scanner(getStream());
+      Scanner scanner = getGitScanner();
       JsonObject jsonObject = jsonStringToJsonArray(buildJson(scanner)).get(0)
           .getAsJsonObject();
       String version = getVersion(jsonObject);

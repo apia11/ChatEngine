@@ -15,7 +15,6 @@ import java.util.regex.Pattern;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 public class Messenger {
@@ -108,7 +107,7 @@ public class Messenger {
       i++;
     }
 
-    return PlaceholderAPIWrapper.setPlaceholders((Player) target, input);
+    return PlaceholderAPIWrapper.setPlaceholders(target, input);
   }
 
   private List<String> applyExtends(@NotNull List<String> list) {
