@@ -23,7 +23,13 @@ public final class MenuCommand extends BaseCommand {
 
   @Override
   protected void execute(@NotNull CommandSender sender, @NotNull String[] args) {
-    menu.open((Player) sender);
+    if (isPlayer(sender)) {
+      menu.open((Player) sender);
+    }
+  }
+
+  public boolean isPlayer(@NotNull CommandSender sender) {
+    return sender instanceof Player;
   }
 
   public void onDisable() {
