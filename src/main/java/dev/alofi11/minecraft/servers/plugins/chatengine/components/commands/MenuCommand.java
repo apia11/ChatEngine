@@ -6,6 +6,7 @@ import dev.alofi11.minecraft.servers.plugins.chatengine.components.permissions.P
 import java.util.List;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.permissions.Permission;
 import org.jetbrains.annotations.NotNull;
 
 public final class MenuCommand extends BaseCommand {
@@ -27,6 +28,11 @@ public final class MenuCommand extends BaseCommand {
 
   public void onDisable() {
     permissionsManager.unregister(permission);
+  }
+
+  @NotNull
+  public Permission getOpenPermission() {
+    return permission;
   }
 
 }

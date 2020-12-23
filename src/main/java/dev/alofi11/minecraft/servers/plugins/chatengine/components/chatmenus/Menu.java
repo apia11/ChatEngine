@@ -21,6 +21,7 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.permissions.Permission;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -186,7 +187,9 @@ public final class Menu implements Listener {
           Menu menu = menusManager.getMenu(getActionContent(input));
           if (menu != null) {
             clients.remove(client);
-            menu.transfer(client);
+            if (client.hasPermission(menu.getOpenPermission())) {
+              menu.transfer(client);
+            }
             return true;
           }
         }
@@ -207,6 +210,11 @@ public final class Menu implements Listener {
     if (clients.contains(player)) {
       close(player, false);
     }
+  }
+
+  @NotNull
+  Permission getOpenPermission() {
+    return command.getOpenPermission();
   }
 
 }
