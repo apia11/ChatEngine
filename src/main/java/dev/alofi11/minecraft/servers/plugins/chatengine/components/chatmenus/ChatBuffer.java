@@ -66,7 +66,7 @@ final class ChatBuffer {
     if (sendBuffered) {
       List<PacketContainer> clientBuffer = getClientBuffer(client);
       while (clientBuffer.size() < MIN_BUFFER_SIZE) {
-        clientBuffer.add(emptyLinePacket);
+        clientBuffer.add(0, emptyLinePacket);
       }
 
       clientBuffer.forEach((packet) -> {
